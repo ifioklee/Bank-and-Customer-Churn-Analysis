@@ -25,11 +25,17 @@ The final Power BI interactive dashboard answers the following questions:
 7. How does age relate to customer churn?
 8. Is there a relationship between tenure and churn rate?
 9. How does the number of products held affect churn?
+
 10.Does estimated salary influence the likelihood of churn?
+
 11.What is the churn distribution across different age groups (e.g., 18–25, 26–35, etc.)?
+
 12.Which combination of factors (e.g., geography + gender) shows the highest churn?
+
 13.Do customers with zero balance churn more than those with money in their account?
+
 15.Is there a link between high credit score and being an active member?
+
 16.What is the churn rate among customers with long tenure (5+ years) compared to new ones?
 
 ---
