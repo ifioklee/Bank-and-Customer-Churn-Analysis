@@ -79,6 +79,21 @@ Full project documentation:
 
 ## Data Preparation & Transformation (Power Query)
 
+#### Account Information Table
+- Change data type of CustomerId column to text
+- Remove two columns that has all entry as NULL
+- Create a new Balance column with only numeric entries and without the Euro currency symbol using the split column by example function
+
+#### Customer Information Table
+- Remove 6 columns that have all entry as NULL
+- Change data type of CustomerID column to text
+- Create a new column named "estimatedSalary" without the Euro currency symbol and change the data type to fixed decimal
+
+Merge Account information and Customer information tables to form a new table and rearrange the structure of the merged table to be the same as the structure of the Bank Customer table.
+
+
+
+
 
 After transformations, data was loaded into **Power BI**.
 
