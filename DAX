@@ -1,0 +1,143 @@
+# DAX Measures Documentation
+
+This document contains the key DAX measures used in the **Bank Customers Churn Analysis** project. Each measure is presented with its purpose and explanation for clarity and future reference.
+
+---
+
+## 1. Total Customers
+
+```DAX
+Total customers =
+CALCULATE(
+    DISTINCTCOUNT(Bank_Customers[CustomerId])
+)
+```
+
+**Description:**
+Calculates the total number of unique customers in the dataset.
+
+---
+
+## 2. Customer Churn
+
+```DAX
+Customer Churn =
+CALCULATE(
+    DISTINCTCOUNT(Bank_Customers[CustomerId]),
+    Bank_Customers[Exited] = 1
+)
+```
+
+**Description:**
+Counts the total number of customers who have churned (Exit = 1).
+
+---
+
+## 3. Percentage Churn
+
+```DAX
+% churn =
+DIVIDE(
+    [Customer Churn],
+    [Total customers]
+)
+```
+
+**Description:**
+Calculates the churn rate as a percentage of total customers.
+
+---
+
+## 4. Average Balance (Churned Customers)
+
+```DAX
+Avg Balance (Churned) =
+CALCULATE(
+    AVERAGE(Bank_Customers[Balance]),
+    Bank_Customers[Exited] = 1
+)
+```
+
+**Description:**
+Returns the average account balance of customers who churned.
+
+---
+
+## 5. Average Balance (Retained Customers)
+
+```DAX
+Avg Balance (Retained) =
+CALCULATE(
+    AVERAGE(Bank_Customers[Balance]),
+    Bank_Customers[Exited] = 0
+)
+```
+
+**Description:**
+Returns the average account balance of customers who are still active.
+
+---
+
+## 6. Number of Countries
+
+```DAX
+Number of Countries =
+CALCULATE(
+    DISTINCTCOUNT(Bank_Customers[Country])
+)
+```
+
+**Description:**
+Counts the total number of unique countries represented in the dataset.
+
+---
+
+## 7. Number of Products
+
+```DAX
+Number of products =
+CALCULATE(
+    DISTINCTCOUNT(Bank_Customers[NumOfProducts])
+)
+```
+
+**Description:**
+Calculates the total number of unique product types owned by customers.
+
+---
+
+## 8. Balance Category (Calculated Column)
+
+```DAX
+Balance Category =
+IF(
+    Bank_Customers[Balance] = 0,
+    "Zero Balance",
+    "Has Balance"
+)
+```
+
+**Description:**
+Segments customers into two categories based on their account balance:
+
+* **Zero Balance**
+* **Has Balance**
+
+This calculated column is useful for churn comparison and behavioral segmentation.
+
+---
+
+## Project Use Case
+
+These measures are primarily used in:
+
+* Churn Rate Analysis
+* Customer Segmentation
+* Financial Performance Monitoring
+* Behavioral Insights Dashboard in Power BI
+
+---
+
+**Author:** Data Analyst
+
+**Last Updated:** 2025
