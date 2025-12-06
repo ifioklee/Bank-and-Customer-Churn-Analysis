@@ -61,11 +61,11 @@ This file contains the DAX formulas used throughout the analysis:
 
 ### Visualization
 Interactive Power BI dashboard:  
-[View Power BI Dashboard]()
+[View Power BI Dashboard](https://github.com/ifioklee/Bank-and-Customer-Churn-Analysis/blob/main/Bank%20Churn%20Analysis.pbix)
 
 ### README.md (Project Overview & Instructions)
 Full project documentation:  
-[View README File]()
+[View README File](https://github.com/ifioklee/Bank-and-Customer-Churn-Analysis/blob/main/README.md)
 
 ---
 
